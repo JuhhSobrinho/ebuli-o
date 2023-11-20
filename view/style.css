@@ -1,0 +1,95 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: #4a4e69;
+    overflow: hidden;
+}
+#main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    color: white;
+    font-family: monospace;
+    margin: 0;
+}
+
+#graus, #horas{
+    font-size: 100px;
+}
+
+#cidadeClima, #am-pm{
+    font-size: 45px;
+}
+
+.clima-tempo{
+    background-color: rgba(185, 185, 185, 0.192);
+    box-shadow: 0px 0px 20px 2px rgba(185, 185, 185, 0.226);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.temp-clima{
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-hora{
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.estadoDoTempo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tempoImg{
+    width:60px;
+    margin-bottom: 10px;
+}
+
+.pesquisa{
+    display: flex;
+}
+
+input{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    padding: 10px;
+}
+
+.suaCidade{
+    background-color: transparent;
+    color: white;
+    width: 170px;
+    transition: 1s;
+    border-bottom: 1px solid white;
+}
+.suaCidade::placeholder{
+    color: rgb(197, 197, 197);
+}
+.suaCidade:hover, .suaCidade:focus{
+    transition: 2s;
+    width: 230px;
+}
+
+.button{
+    cursor: pointer;
+    width: 25px;
+}
+.button:hover{
+    transition: 2s;
+    cursor: pointer;
+}
