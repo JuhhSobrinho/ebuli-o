@@ -54,7 +54,7 @@ function main() {
 
       const speedVento = 'Vento ' + parseInt(data.wind.speed * 3,6) + ' km/h';
 
-      const umidade = 'Umidade ' + (data.main.humidity) + ' %';
+      const umidade = 'Umidade ' + (data.main.humidity) + '%';
 
       console.log('sla', data.weather[0].description);
 

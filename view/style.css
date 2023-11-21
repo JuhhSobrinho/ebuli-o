@@ -112,4 +112,21 @@ input{
         justify-content: center;
         flex-direction: column;
     }
+    .clima-tempo{
+        width: 300px;
+        overflow: hidden;
+        
+    }
+    .data-hora{
+        width: 300px;
+    }
+    #horas{
+        font-size: 65px;
+    }
+    .text, .max-min{
+        font-size: 15px;
+    }
+    #estadoTempo{
+        width: 50px;
+    }
 }
