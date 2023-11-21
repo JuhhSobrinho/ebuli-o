@@ -11,8 +11,8 @@ const estadoDoTempo = document.getElementById('estadoTempo');
 const grausDaCity = document.getElementById('graus');
 
 const iconEstadoDoTempo = document.getElementById('tempoImg');
-const cloudImg = '../docs/assets/cloud.svg';
-const rainImg = '../docs/assets/rain.svg';
+const cloudImg = '../view/assets/cloud.svg';
+const rainImg = '../view/assets/rain.svg';
 
 const tempoGeral = document.getElementById('tempo');
 const tempMax = document.getElementById('maxTemp');
