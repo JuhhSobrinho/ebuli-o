@@ -127,6 +127,10 @@ input{
         font-size: 15px;
     }
     #estadoTempo{
-        width: 50px;
+        width: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }
