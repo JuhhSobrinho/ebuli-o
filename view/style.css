@@ -12,7 +12,7 @@ body{
     justify-content: center;
 }
 
-.text{
+.text, .max-min{
     color: white;
     font-family: monospace;
     margin: 0;
@@ -36,7 +36,16 @@ body{
 
 .temp-clima{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: end;
+    padding-bottom: 0px;
+}
+
+.max-min-temp{
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    flex-direction: row;
 }
 
 .data-hora{
@@ -92,4 +101,15 @@ input{
 .button:hover{
     transition: 2s;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #main{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
