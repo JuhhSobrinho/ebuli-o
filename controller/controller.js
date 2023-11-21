@@ -28,7 +28,6 @@ const pesquiID = document.getElementById('cityID');
 
 
 botao.addEventListener('click', () => {
-  console.log(pesquiID.value);
 
   const novaCity = pesquiID.value;
   cidade = novaCity;
@@ -41,7 +40,7 @@ function main() {
   obterDadosClima(apiKey, cidade)
     .then(data => {
       // Processar os dados no controlador
-      console.log(data);
+      console.log(data.weather[0].main);
       const descricaoTempo = data.weather[0].description;
       const mainTempo = data.weather[0].main;
 
@@ -56,7 +55,7 @@ function main() {
 
       const umidade = 'Umidade ' + (data.main.humidity) + '%';
 
-      console.log('sla', data.weather[0].description);
+      console.log(data.weather[0].description);
 
 
       city.innerHTML = data.name;
