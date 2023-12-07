@@ -11,8 +11,7 @@ const estadoDoTempo = document.getElementById('estadoTempo');
 const grausDaCity = document.getElementById('graus');
 
 const iconEstadoDoTempo = document.getElementById('tempoImg');
-const cloudImg = '../view/assets/cloud.svg';
-const rainImg = '../view/assets/rain.svg';
+const cloudImg = 'https://openweathermap.org/img/wn/';
 
 const tempoGeral = document.getElementById('tempo');
 const tempMax = document.getElementById('maxTemp');
@@ -28,7 +27,6 @@ const pesquiID = document.getElementById('cityID');
 
 
 botao.addEventListener('click', () => {
-  console.log(pesquiID.value);
 
   const novaCity = pesquiID.value;
   cidade = novaCity;
@@ -41,7 +39,8 @@ function main() {
   obterDadosClima(apiKey, cidade)
     .then(data => {
       // Processar os dados no controlador
-      console.log(data);
+
+      const climaImg = cloudImg+(data.weather[0].icon)+ '.png';
       const descricaoTempo = data.weather[0].description;
       const mainTempo = data.weather[0].main;
 
@@ -52,11 +51,9 @@ function main() {
       const minTemp = '/'+ parseInt(data.main.temp_min - 273.15) + '°';
       const sensacaoTemp = 'Sensação térmica de '+ parseInt(data.main.feels_like - 273.15) + '°';
 
-      const speedVento = 'Vento ' + parseInt(data.wind.speed * 3,6) + ' km/h';
+      const speedVento = 'Vento ' + parseInt(data.wind.speed * 3.6) + ' km/h';
 
       const umidade = 'Umidade ' + (data.main.humidity) + '%';
-
-      console.log('sla', data.weather[0].description);
 
 
       city.innerHTML = data.name;
@@ -69,12 +66,8 @@ function main() {
       vento.innerHTML = speedVento;
 
 
+        iconEstadoDoTempo.src = climaImg;
 
-      if (mainTempo == "Clouds") {
-        iconEstadoDoTempo.src = cloudImg;
-      } else if (mainTempo == 'Rain') {
-        iconEstadoDoTempo.src = rainImg;
-      }
 
     })
 
