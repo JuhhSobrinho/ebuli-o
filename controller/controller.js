@@ -91,5 +91,3 @@ function renderizarHoraAtual() {
 // Iniciar a renderização a cada segundo
 const intervalId = setInterval(renderizarHoraAtual, 1000);
 const intervalIdTempo = setInterval(main(), 1000);
-
-
